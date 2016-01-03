@@ -1,11 +1,12 @@
 function RefreshPoison()	
 	--DEFAULT_CHAT_FRAME:AddMessage("Debug")
-	-- TODO: Fehler Abfangen die z.B. entstehen können wenn kein Gift im Inventar gefunden wurde oder keine Waffe angelegt ist.
-	if not IsBuffActive("Sofort wirkendes Gift VI", "mainhand") then
+	if not IsBuffActive("Sofort wirkendes Gift VI", "mainhand") and not IsBuffActive("Sofort wirkendes Gift VI", "offhand") then
 		useContainerItemByName("Sofort wirkendes Gift VI")
-		PickupInventoryItem(16)
-	end
-	if not IsBuffActive("Sofort wirkendes Gift VI", "offhand") then
+		PickupInventoryItem(16)	
+	elseif not IsBuffActive("Sofort wirkendes Gift VI", "mainhand") then
+		useContainerItemByName("Sofort wirkendes Gift VI")
+		PickupInventoryItem(16)	
+	elseif not IsBuffActive("Sofort wirkendes Gift VI", "offhand") then
 		useContainerItemByName("Sofort wirkendes Gift VI")
 		PickupInventoryItem(17)
 	end	
