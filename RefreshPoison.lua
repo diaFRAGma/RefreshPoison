@@ -1,13 +1,13 @@
-function RefreshPoison()	
+function RefreshPoison(item)	
 	--DEFAULT_CHAT_FRAME:AddMessage("Debug")
-	if not IsBuffActive("Sofort wirkendes Gift VI", "mainhand") and not IsBuffActive("Sofort wirkendes Gift VI", "offhand") then
-		useContainerItemByName("Sofort wirkendes Gift VI")
+	if not IsBuffActive(item, "mainhand") and not IsBuffActive(item, "offhand") then
+		useContainerItemByName(item)
 		PickupInventoryItem(16)	
-	elseif not IsBuffActive("Sofort wirkendes Gift VI", "mainhand") then
-		useContainerItemByName("Sofort wirkendes Gift VI")
+	elseif not IsBuffActive(item, "mainhand") then
+		useContainerItemByName(item)
 		PickupInventoryItem(16)	
-	elseif not IsBuffActive("Sofort wirkendes Gift VI", "offhand") then
-		useContainerItemByName("Sofort wirkendes Gift VI")
+	elseif not IsBuffActive(item, "offhand") then
+		useContainerItemByName(item)
 		PickupInventoryItem(17)
 	end	
 end
