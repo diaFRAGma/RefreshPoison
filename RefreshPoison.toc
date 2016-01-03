@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: RefreshPoison 1.0
+## Version: 1.0
+## Notes: Refreshes the Poison on the Weopons.
+## Notes-deDE: Erneuert das Gift auf den Waffen.
+## Author: Ambro
+## Dependencies: IsBuffActive
+RefreshPoison.lua

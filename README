@@ -1,0 +1,13 @@
+World of Warcraft 1.12.1 Addon zum erneuern der Gifte
+
+Im Spiel muss ein Makro angelegt werden mit folgendem Inhalt:
+/run RefreshPoison()
+
+Wenn das Makro ausgeführt wird, dann wird auf der Waffe, auf der Sofort wirkendes Gift VI ausgelaufen ist das Gift erneuert.
+
+Nützliche Links:
+World of Warcraft 1.12.1 API
+http://vanilla-wow.wikia.com/wiki/World_of_Warcraft_API
+http://www.wowwiki.com/index.php?title=World_of_Warcraft_API&oldid=281620
+Programming in Lua
+http://www.lua.org/pil/contents.html
