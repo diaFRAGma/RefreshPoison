@@ -1,9 +1,11 @@
 World of Warcraft 1.12.1 Addon zum erneuern der Gifte
 
 Im Spiel muss ein Makro angelegt werden mit folgendem Inhalt:
-/run RefreshPoison()
+/run RefreshPoison("xxx")
+Wobei "xxx" z.B. "Sofort wirkendes Gift VI" sein kann oder auch "Verdichteter Wetzstein".
 
-Wenn das Makro ausgeführt wird, dann wird auf der Waffe, auf der Sofort wirkendes Gift VI ausgelaufen ist das Gift erneuert.
+Wenn das Makro ausgeführt wird, dann wird auf der Waffe, auf der das Gift ausgelaufen ist das Gift erneuert.
+Wenn auf beiden Waffen das Gift ausgelaufen ist wird zunächst auf der MainHand und dann auf der OffHand das Gift erneuert.
 
 Nützliche Links:
 World of Warcraft 1.12.1 API
