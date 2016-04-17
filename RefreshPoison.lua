@@ -1,15 +1,16 @@
-function RefreshPoison(item)	
+local count = 0
+
+function RefreshPoison(item)
 	--DEFAULT_CHAT_FRAME:AddMessage("Debug")
-	if not IsBuffActive(item, "mainhand") and not IsBuffActive(item, "offhand") then
+	if count == 0 then
 		useContainerItemByName(item)
 		PickupInventoryItem(16)	
-	elseif not IsBuffActive(item, "mainhand") then
+		count = 1
+	elseif count == 1 then
 		useContainerItemByName(item)
-		PickupInventoryItem(16)	
-	elseif not IsBuffActive(item, "offhand") then
-		useContainerItemByName(item)
-		PickupInventoryItem(17)
-	end	
+		PickupInventoryItem(17)	
+		count = 0
+	end
 end
 
 function useContainerItemByName(pName)
